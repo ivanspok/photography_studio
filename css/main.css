@@ -1,0 +1,325 @@
+/* Common */
+:root {
+  --background-color_1: black;
+  --text-color_1: aliceblue;
+}
+
+*{
+  color: var(--text-color_1);
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--background-color_1);
+  height: 100%;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+  top: 5vh;
+  font-size: 50px;
+  margin-bottom: 6vh;
+}
+
+/* Navigation Menu */
+
+nav {
+  color: var(--text-color_1);
+  font-size: 18px;
+  background-color: blue;
+}
+
+/* Left label */
+.LeftTopLabel {
+  color: var(--text-color_1);
+  position: absolute;
+  top: 10px;
+  left: 5vw;
+  font-family: 'Akronim'; letter-spacing: 1px;
+  margin: 0px;
+  padding: 0px;
+  font-size: 38px;
+  z-index: 1000;
+}
+
+.LeftTopLabel:hover{
+  color: orange;
+}
+/*  */
+
+.MenuItemFirst {
+  margin-bottom: 20px;
+}
+
+.MenuItemFirst a:hover, .MenuItem a:hover{
+  color: grey;
+}
+
+.TopNav {
+  display: block;
+  color: var(--text-color_1);
+  margin-bottom: 20px;
+  width: 80px;
+  /* height: 40px; */
+  padding: 0px 10px;
+}
+
+.TopNav a:hover {
+  color: grey;
+}
+
+.MenuList.MenuItem a:hover{
+  color: grey;
+}
+
+.NavigationMenu {
+  list-style-type: none;
+  position: fixed;
+  overflow: visible;
+  top: 0;
+  right: 2vw;
+  z-index: 999;
+  display: block;
+}
+
+.MenuList {
+  padding: 0px 10px;
+  width: 80px;
+  text-align: left;
+  display: none;
+  list-style-type: none;
+  float: left;
+  z-index: 999;
+  background-color: black;
+}
+
+#MenuIcon, #CloseIcon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 4vw;
+}
+
+/* Main Content */
+
+/* .flex-container {
+  display: flex;
+} */
+
+.flex-container .left-block {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 60vh;
+  width: 48vw;
+  position: absolute;
+  left: 50px;
+  top: 250px;
+  min-width: 450px;
+  z-index: 0;
+}
+
+.flex-container .right-block{
+  background-image: url('../images/photo1.jpg');
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: contain ;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  background-position: right center;
+  width: 82vw;
+  height: 1000px;
+}
+
+.left-block {
+  background-color: none;
+  text-align: center;
+}
+
+.left-block a {
+  color: black;
+  font-size: 20px;
+  position: relative; 
+  top: 60%;  
+}
+
+.left-block .h11{
+  color: black;
+  font-family: 'Quattrocento';
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  top: 40%;
+}
+
+footer
+{
+  position: absolute;
+  bottom: 1%;
+  /* bottom: 10px; */
+  left: 3%;
+  /* z-index: -100; */
+}
+
+footer a{
+  font-family: 'Akronim'; font-size: 30px;
+  margin: 15px;
+}
+
+footer a:hover{
+  color: orange;
+}
+
+
+/* Responsive design */
+
+@media only screen and (min-width: 950px){
+  .TopNav {
+    float: left;
+  }
+
+  .PopupMenu {
+    float: left;
+  }
+
+  #ChevronDownIcon{
+    display: none;
+  }
+
+  #ChevronUpIcon{
+    display: none;
+  }
+
+  #MenuIcon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .flex-container  .right-block{
+    height: 800px;
+  }
+
+  .flex-container .left-block{
+    left: 0px;
+  }
+
+  #ChevronDownIcon, #ChevronUpIcon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  .flex-container  .right-block{
+    height: 800px;
+  }
+
+  .flex-container .left-block{
+    left: 0px;
+  }
+
+  .left-block .h11{
+    font-size: 40px;
+  }
+
+  .flex-container .left-block{
+    width: 100%;
+    left: 0px;
+    top: 350px;
+    height: 40vh;
+    min-width: 300px;
+  }
+
+  .flex-container .right-block{
+    top: 60px; 
+    background-position: top center;
+    background-size: contain;
+    width: 100%;
+    height: 55vh;
+    }
+
+ #MenuIcon {
+    display: block;
+  }
+
+ #CloseIcon {
+  display: none;
+  z-index: 1000;
+ }
+
+  footer {
+    position: fixed;
+    top: 94%;
+  }
+
+  .left-block a {
+    position: relative;
+    top: 45%;
+  }
+
+  .NavigationMenu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+  }
+
+  .MenuItem, .MenuItemFirst {
+    margin-bottom: 20px;
+    width: 80px;
+    float: left;
+  }
+
+  .PopupMenu{
+    position: relative;
+    top: 0%;
+    left: 40%;
+    margin-bottom: 20px;
+  }
+
+  .MenuList {
+    height: auto;
+    position: relative;
+    display: none;
+    padding: 0px;
+  }  
+
+  .TopNav {
+    padding: 0px;
+  }
+
+  .NoMenu {
+    position: relative;
+    left: 40%;
+    margin-bottom: 20px;
+    top: 0%;
+    padding: 0px;
+  } 
+
+  #ChevronDownIcon{
+    position: relative;
+    top: 27px;
+    left: -32px;
+    display: block;
+  }
+
+  #ChevronUpIcon{
+    position: relative;
+    top: 27px;
+    left: -32px;
+    display: none;
+  }
+}

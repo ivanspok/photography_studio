@@ -1,0 +1,64 @@
+{% extends 'index.html' %}
+
+{% block css %}
+  <link rel='stylesheet' href="{{ url_for('static', filename='/css/portfolio.css') }}">
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="main">
+
+  <h1>PORTFOLIO</h1>
+  
+  {% for image in images %} 
+
+  <div class="imageContainer" onmouseover=showImageLabel(event) onmouseleave=hideImageLabel(event)> 
+    <img src="{{ url_for('static', filename=image.path)  }}" class="images"> 
+    <p class="imageLabel">{{image.label}}</p>
+  </div>
+
+  {% endfor %}
+
+
+  {% endblock %}
+
+  <footer>
+    <a>Facebook</a>
+    <a>Instagram</a>
+    <a>Twitter</a>
+  </footer>
+
+  </div>
+
+</html>
+
+
+<!-- 
+  <div class="main">
+
+    <h1>PORTFOLIO</h1>
+    
+
+    <div class="imageContainer" onmouseover=showImageLabel(event) onmouseleave=hideImageLabel(event)> 
+      <img src="../images/xxx/1667170386_68-huivpizde-com-p-porno-golie-babi-krasivie-kiski-tolko-kuni-71.jpg" class="images"> 
+      <p class="imageLabel">Portraits</p>
+    </div>
+     
+     <div class="imageContainer" onmouseover=showImageLabel(event) onmouseleave=hideImageLabel(event)> 
+      <img src="../images/xxx/171.jpg" class="images"> 
+      <p class="imageLabel">Family</p>
+     </div>
+
+     <div class="imageContainer" onmouseover=showImageLabel(event) onmouseleave=hideImageLabel(event)> 
+      <img src="../images/xxx/p6v2c7rfvqd61.png" class="images"> 
+      <p class="imageLabel">Maternity</p>
+     </div>
+
+     <div class="imageContainer" onmouseover=showImageLabel(event) onmouseleave=hideImageLabel(event)> 
+      <img src="../images/xxx/FuGbyTwX0BICmi-.jpg" class="images"> 
+      <p class="imageLabel">Commerial</p>
+     </div>
+
+  <div> -->
+

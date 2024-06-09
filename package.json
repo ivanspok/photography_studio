@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lightgallery": "^2.7.2",
+    "viewerjs": "^1.11.6"
+  }
+}

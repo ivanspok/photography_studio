@@ -1,0 +1,56 @@
+.main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+
+.imageContainer{
+  position: relative;
+  overflow: hidden;
+  width: 90vw;
+  height: 95vh;
+  /* vertical-align: center; */
+  margin: 0vw 5vw 5vh 5vw;
+  /* float: left; */
+  align-content: center;
+  /* justify-content: center; */
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  300px); }
+  100%   { transform: translate(0, 0px); }    
+}
+
+.images {
+  align-content: center;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+  height: 100%;
+ } 
+
+ @keyframes scaling {
+  0% { transform: scale(1) }
+  100%   { transform: scale(1.5) }    
+}
+
+.images:hover{
+  filter: brightness(30%);
+  animation: scaling;
+  animation-duration: 2s;
+  /* transform: scale(1.5); */
+}
+
+.imageLabel { 
+  position: relative;
+  top: -50%;
+  text-align: center;
+  font-size: 7vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 2s, opacity 2s;
+}

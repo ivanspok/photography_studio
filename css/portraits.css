@@ -1,0 +1,45 @@
+.main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+
+.imageContainer1{
+  position: relative;
+  overflow: hidden;
+  width: 40vw;
+  height: auto;
+  vertical-align: top;
+  margin: 0vw 4.5vw 20vh 4.7vw;
+  float: left;
+}
+
+.imageContainer2{
+  position: relative;
+  overflow: hidden;
+  width: 40vw;
+  height: 70vh;
+  vertical-align: bottom;
+  margin: 0vw 4.5vw 20vh 4.7vw;
+  float: right;
+} 
+
+@keyframes floating {
+  0% { transform: translate(0,  300px); }
+  100%   { transform: translate(0, 0px); }    
+}
+
+.Images {
+  vertical-align: top;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+ } 
+
+.Images:hover{
+  filter: brightness(30%);
+  transform: scale(1.5);
+}

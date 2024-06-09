@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+  <link rel='stylesheet' href="../css/main.css">
+
+  <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery.css" />
+  <!-- lightgallery plugins -->
+  <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-zoom.css" />
+  <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lg-thumbnail.css" />
+  <!-- <link type="text/css" rel="stylesheet" href="../node_modules/lightgallery/css/lightgallery-bundle.css" /> -->
+
+  <link  href="../node_modules/viewerjs/dist/viewer.css" rel="stylesheet">
+  <script src="../node_modules/viewerjs/dist/viewer.js"></script>
+
+  <title>Photograhpy Studio</title>
+</head>
+
+<body>
+
+  <script src="../node_modules/lightgallery/lightgallery.umd.js"></script>
+
+  <!-- lightgallery plugins -->
+  <script src="../node_modules/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+  <script src="../node_modules/lightgallery/plugins/zoom/lg-zoom.umd.js"></script>
+
+  <!-- <div id="image">
+    <a href="../images/photo2.jpg" data-lg-size="600-400">
+        <img alt=".." src="../images/photo2.jpg" />
+    </a>
+    <a href="../images/photo2.jpg" data-lg-size="600-400">
+      <img alt=".." src="../images/photo2.jpg" />
+   </a>
+  </div> -->
+
+  <div>
+    <img id="image" src="../images/photo2.jpg" alt="Picture">
+  </div>
+
+  <script type="text/javascript">
+    // alert('te11')
+    // var path = "../node_modules/viewerjs/dist/viewer.js";
+    // alert(path)
+    
+    // if(system.functions.isfileexist(path)){
+    //   alert('The file exists');
+    // }else{
+    //   alert('The file does not exist');
+    // }
+    // // import Viewer from "../node_modules/viewerjs/dist/viewer.js"; 
+    // // alert(Viewer)
+    // alert('te')
+ 
+    // View an image.
+    const viewer = new Viewer(document.getElementById('image'), {
+      inline: true,
+      viewed() {
+        viewer.zoomTo(1);
+      },
+    });
+
+    // tt = lightGallery(document.getElementById('lightgallery'), {
+    //     // plugins: [lgThumbnail, lgZoom],
+    //     // speed: 500,
+    //     // licenseKey: "0000-0000-000-0000"
+    // });
+    // alert(tt)
+  </script>
+
+</body>
+</html>
