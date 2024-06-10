@@ -93,19 +93,25 @@ for (var i = 0; i < l; i++){
 window.addEventListener('scroll', function (event) {
 
   var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  var shiftvalue;
+  if ($(window).width() < 600){
+    shiftvalue = '-50px';
+  }else{
+    shiftvalue = '-100px';
+  }
 
   for (var i = 0; i < l; i++){
     
     if (scrollTop > lastScrollTop){ //scrolling down
      if (isInViewport(imageContainers[i]) && imageContainersFloated[i] == false ){
-        $(imageContainers[i]).animate({'top':'-100px'}, 1000);
+        $(imageContainers[i]).animate({'top': shiftvalue}, 1000);
         imageContainersFloated[i] = true;
       }      
     }
 
     if (scrollTop < lastScrollTop){  //scrolling up
       if (isBottomInViewport(imageContainers[i])){
-        if ($(imageContainers[i]).css('top') == '-100px'){
+        if ($(imageContainers[i]).css('top') == shiftvalue ){
           $(imageContainers[i]).animate({'top':'0px'}, 1000);
         }
       }

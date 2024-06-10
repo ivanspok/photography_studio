@@ -164,7 +164,7 @@ nav {
 footer
 {
   position: absolute;
-  bottom: 1%;
+  bottom: 0px;
   /* bottom: 10px; */
   left: 3%;
   /* z-index: -100; */
@@ -249,6 +249,7 @@ footer a:hover{
 
  #MenuIcon {
     display: block;
+    z-index: 1000;
   }
 
  #CloseIcon {
@@ -256,10 +257,10 @@ footer a:hover{
   z-index: 1000;
  }
 
-  footer {
+  /* footer {
     position: fixed;
     top: 94%;
-  }
+  } */
 
   .left-block a {
     position: relative;

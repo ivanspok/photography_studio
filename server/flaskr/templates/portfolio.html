@@ -14,8 +14,8 @@
   {% for image in images %} 
 
   <div class="imageContainer" onmouseover=showImageLabel(event) onmouseleave=hideImageLabel(event)> 
-    <img src="{{ url_for('static', filename=image.path)  }}" class="images"> 
-    <p class="imageLabel">{{image.label}}</p>
+    <img src = {{ image.path }} class="images">
+    <p class="imageLabel">{{ image.label }}</p>
   </div>
 
   {% endfor %}

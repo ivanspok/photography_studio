@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block css %}
+ <link rel='stylesheet' href="{{url_for('static', filename='/css/portraits.css')}}">
+{% endblock %}
+ 
+
+{% block content %}
+  <div class="main">
+
+    <h1>FAMILY</h1>
+
+    {% for image in images %} 
+   
+      <div class="imageContainer{{ image.container_number }} {{image.topImage }}"
+        {% if image.position == 'left' %}
+          style="float: left;"
+        {% else %}
+          style="float: right;"
+        {% endif %}
+      > 
+        <img src="{{ image.path }}" class="images">
+          
+      </div>
+    
+    {% endfor %}
+
+  {% endblock %}
+
+  <footer>
+    <a>Facebook</a>
+    <a>Instagram</a>
+    <a>Twitter</a>
+  </footer>
+
+  </div>
+
+{% block scripts %}
+ <script src="{{url_for('static', filename='/js/floating.js')}}"> </script>
+{% endblock %}
+
+
+</html>

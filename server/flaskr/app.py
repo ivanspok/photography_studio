@@ -1,9 +1,12 @@
 from flask import Flask, render_template
 import os
 from functions import get_images_for_float_galleries, get_images_for_porfolio
-
-
+print('run APP')
+APP_PATH = os.path.dirname(os.path.realpath(__file__))
+print(APP_PATH)
 app = Flask(__file__)
+app.static_url_path = os.path.join(APP_PATH, 'static')
+print(app.static_url_path)
 
 @app.route('/')
 @app.route('/index')
@@ -12,12 +15,20 @@ def index():
 
 @app.route('/portfolio')
 def portfolio():
-  images = get_images_for_porfolio("taisa")
+  images = get_images_for_porfolio('portfolio')
+  print(images)
   return render_template('portfolio.html', images=images)
+
+@app.route("/portraits")
+def portraits():
+  images = get_images_for_float_galleries('portraits')
+  print(images)
+  return render_template('portraits.html', images=images)
 
 @app.route('/family')
 def family():
-  return render_template('family.html')
+  images = get_images_for_float_galleries('family')
+  return render_template('family.html', images=images)
 
 @app.route('/maternity')
 def maternity():
@@ -46,13 +57,6 @@ def contacts():
 @app.route('/log_ig')
 def log_in():
   return render_template('log_in.html')
-
-@app.route("/portraits")
-def portraits():
-  
-  images = get_images_for_float_galleries("Taisa")
-
-  return render_template('portraits.html', images=images)
 
 if __name__ == "__main__":
   app.run(debug=True)

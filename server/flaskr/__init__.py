@@ -1,15 +1,23 @@
 import sys, os
-
 from flask import Flask
+
 # from functions import get_images_for_float_galleries
 
 
 # print(os.path.dirname(os.path.realpath(__file__)))
+
+print('INIT')
 APP_PATH = os.path.dirname(os.path.realpath(__file__))
-# sys.path.append(os.path.join(APP_PATH, 'functions.py'))
 sys.path.append(APP_PATH)
+
+
+# from app import app
+
+
+# app.run(debug=True)
+
 # print(sys.path)
-# print('INIT')
+
 # import functions
 # app = Flask(__file__)
 # def create_app(test_config=None):
