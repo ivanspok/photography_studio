@@ -1,0 +1,50 @@
+/* Main Content */
+
+.flex-container .left-block {
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 60vh;
+  width: 48vw;
+  position: absolute;
+  left: 50px;
+  top: 250px;
+  min-width: 450px;
+  z-index: 0;
+}
+
+.flex-container .right-block{
+  background-image: url('../images/main.jpg');
+  filter: grayscale(100%);
+  background-repeat: no-repeat;
+  background-size: contain ;
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  background-position: right center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left-block {
+  background-color: none;
+  text-align: center;
+}
+
+.left-block a {
+  color: black;
+  font-size: 20px;
+  position: relative; 
+  top: 60%;
+  text-decoration: underline;
+}
+
+.left-block .h11{
+  color: black;
+  font-family: 'Quattrocento';
+  font-size: 60px;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  top: 40%;
+}

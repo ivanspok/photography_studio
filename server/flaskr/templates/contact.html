@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+{% block css %}
+ <link rel='stylesheet' href="{{url_for('static', filename='/css/contact.css')}}">
+{% endblock %}
+
+
+{% block content %}
+
+   <h1>GET IN TOUCH</h1>
+
+    <div class="main">
+
+      <div class="flex-container">
+        <div class="right-block">
+          <form>
+            <label for="firstName" class='leftFormLabel firstelement'>First Name</label>
+            <label for="lastName" class='rightFormLabel firstelement'>Last Name</label><br>
+            <input type="text" name="firstName" id="firstName" class='leftForm'>
+            <input type="text" name="lastName" id="lastName" class='rightForm'><br>
+
+            <label for="email" class='leftFormLabel'>Email</label>
+            <label for="subject" class='rightFormLabel'>Subject</label><br>
+            <input type="text" name="email" id="email" class='leftForm'>
+            <input type="text" name="subject" id="subject" class='rightForm'><br>
+
+            <label for="message" class='leftFormLabel'>Message</label><br>
+            <input type="text" name="message" id="message" class='lineForm'><br>
+
+            <input type="button" name="submit" id="submit" value="Submit">
+  
+          </form>
+        </div>
+        <div class="left-block">
+            <p>
+             For inquiries about sessions and pricing fill out the form and someone will get back to you.
+            </p> 
+            <p>
+              500 Terry Francine Street San Francisco, CA 94158
+            </p>
+            <p>
+              taisa1994@mail.ru
+            </p>
+        </div>
+      </div>
+
+    </div>
+{% endblock %}
+
+</html>

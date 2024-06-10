@@ -1,0 +1,107 @@
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+.flex-container .left-block {
+  background-color: white;
+  height: 60vh;
+  width: 40vw;
+  position: absolute;
+  right: 50vw;
+  top: 250px;
+  /* min-width: 450px; */
+  /* z-index: 0; */
+  text-align: center;
+}
+
+.flex-container .right-block{
+  background-image: none;
+  background-color: white;
+  left: 50vw;
+  position: absolute;
+  width: 40vw;
+  /* right: 4vw; */
+  top: 250px;
+  height: 60vh;
+}
+
+.left-block p{
+  padding: 1% 30%;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+
+.left-block p, h2{
+  margin-top: 2rem;
+  color: black;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.left-block h2 {
+  font-size: 2.2rem;
+}
+
+form label{
+  color: black;
+}
+
+.firstelement {
+  padding-top: 8vh;
+}
+
+.leftFormLabel, .rightFormLabel {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 5px;
+  width: 40%;
+}
+
+.rightFormLabel {
+  left: 1%;
+  margin-left: 3vw;
+}
+
+.leftFormLabel {
+  left: 5%;
+}
+
+.leftForm, .rightForm {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+  width: 40%;
+}
+
+.leftForm {
+  left: 5%;
+}
+
+.rightForm {
+  left: 0%;
+  margin-left: 3vw;
+}
+
+.lineForm {
+  display: inline-block;
+  position: relative;
+  left: 5%;
+  width: 85%;
+  height: 6vh;
+}
+
+#submit {
+  display: inline-block;
+  position: relative;
+  background-color: black;
+  margin-top: 2vh;
+  left: 5%;
+  width: 86%;
+  height: 6vh;
+}
+
+
+@media only screen and (max-width: 600px){
+ 
+}

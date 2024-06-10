@@ -50,9 +50,9 @@ def about():
 def clients_albums():
   return render_template('clients_albums.html')
 
-@app.route('/contacts')
-def contacts():
-  return render_template('contacts.html')
+@app.route('/contact')
+def contact():
+  return render_template('contact.html')
 
 @app.route('/log_ig')
 def log_in():

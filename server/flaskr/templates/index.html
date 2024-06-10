@@ -13,10 +13,14 @@
   <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel='stylesheet' href="{{url_for('static', filename='/css/main.css')}}">
   {% block css %}
+  <link rel='stylesheet' href="{{url_for('static', filename='/css/index.css')}}">
   {% endblock %}
 
 
@@ -49,7 +53,7 @@
       <li class="TopNav NoMenu"><a href="{{url_for('services')}}">Services</a></li>      
       <li class="TopNav NoMenu"><a href="{{url_for('about')}}">About</a></li>
       <li class="TopNav NoMenu"><a href="{{url_for('clients_albums')}}">Clients Albums</a></li>
-      <li class="TopNav NoMenu"><a href="{{url_for('contacts')}}">Contact</a></li>
+      <li class="TopNav NoMenu"><a href="{{url_for('contact')}}">Contact</a></li>
       <li class="TopNav NoMenu"><i class='fas fa-user-circle' style='font-size:26px;'></i><a href="{{url_for('log_in')}}"> Log In</a></li>
     </ul>
  
